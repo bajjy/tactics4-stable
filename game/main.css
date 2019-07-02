@@ -1,0 +1,645 @@
+/*safari fixes*/
+/* main.safari [data-kkey="scene"] {
+    background-color: #1a1a1a;
+}
+main.safari [data-kkey="bg"] {
+    display: none;
+} */
+/**/
+body, html {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    margin: 0;
+    overflow: hidden;
+}
+main {
+    height: 100%;
+    overflow: hidden;
+}
+article {
+    width: 50%;
+    height: 100%;
+}
+textarea {
+    display: block;
+    margin-bottom: 1em;
+    height: 50%;
+    width: 90%;
+}
+main.scroll * {
+    background-image: none !important;
+    border: 1px solid black;
+}
+div.ui {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    bottom: 0;
+    margin: auto;
+    width: 5vh;
+    height: 5vh;
+    min-height: 1.5em;
+    min-width: 1.5em;
+    font-size: 5vh;
+    opacity: 0.15;
+    color: white;
+    background-color: #7e62c4;
+    box-shadow: inset 0 0 0 1px #2a2a29;
+    transition: All 100ms linear;
+}
+div.ui:hover {
+    opacity: 1;
+    box-shadow: inset 0 0 0 1px white;
+}
+div.ui.left {
+    left: -1px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+div.ui.right {
+    right: -1px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+div.spin {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: #2a2a29;
+    z-index: 9999;
+}
+div.spin svg {
+    display: block;
+    min-height: 1.5em;
+    min-width: 1.5em;
+    height: 5vh;
+    width: 5vh;
+    animation: rotation 500ms steps(4) infinite;
+}
+.spinner ~div.spin {
+    display: flex;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+    75% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+.target {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.25);
+    border: 1px solid red;
+}
+.hud {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+.hud > div {
+    padding: 10px;
+} 
+
+.map >  [data-sihdre-y] {
+    position: absolute;
+    line-height: 0;
+    width: auto;
+    white-space: nowrap;
+}
+.map [data-sihdre-x] {
+    display: inline-block;
+    position: relative;
+    /* margin: 1px;
+    width: 256px;
+    height: 256px; */
+    border-radius: 10%;
+    /*background-color: rgb(231, 52, 52);*/
+    background-image: url(https://cdn4.iconfinder.com/data/icons/vectory-symbols/40/hexagon-512.png);
+    background-size: 120%;
+    background-position: center;
+
+}
+[data-sihdre-el="unit"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    width: 90%;
+    height: 90%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 16px;
+    text-align: center;
+    z-index: 1;
+    border-radius: 50%;
+    border: 1px dashed black;
+    opacity: 0.7;
+}
+[data-sihdre-el="unit"] .selectedUnit {
+    background-color: white;
+}
+[data-sihdre-el="unit"] [data-sihdre-status="unconscious"]:before {
+    content: "\2716";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 2em;
+    line-height: 70px;
+    color: red;
+}
+[data-sihdre-el="effects"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    width: 80%;
+    height: 80%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 50%;
+    margin: auto;
+    font-size: 16px;
+    text-align: center;
+    z-index: 0;
+    background-color: blueviolet;
+    opacity: 0.7;
+}
+[data-sihdre-el="markers"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: auto;
+    text-align: center;
+    z-index: 0;
+    opacity: 0.7;
+}
+[data-sihdre-el="markers"] .marker {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.marker.area {
+    border-radius: 50%;
+    background-color: rgb(114, 184, 45);
+    opacity: 0.5;
+}
+.marker.search {
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+    background-color: rgb(45, 184, 177);
+    opacity: 0.9;
+}
+.marker.select {
+    border-radius: 50%;
+    width: 85%;
+    height: 85%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+}
+.marker.target {
+    border-radius: 50%;
+    width: 85%;
+    height: 85%;
+    background-color: rgb(255, 38, 0);
+    opacity: 0.9;
+}
+
+.slectedUnit {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid blueviolet;
+    border-radius: 50%;
+}
+.field {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(82, 117, 37, 0.418);
+    background-color: rgba(82, 117, 37, 0.25);
+    border-radius: 50%;
+}
+.path {
+    position: absolute;
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right:0; */
+    margin: auto;
+    background-color: rgb(83, 117, 37);
+    border-radius: 50%;
+}
+.effect {
+    pointer-events: none;
+}
+.effect.slow {
+    background-color: rgba(104, 94, 7, 0.726);
+}
+
+.effect.incognita {
+    border-radius: 25%;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 60px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.sprite {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: blueviolet;
+}
+.segment {
+    z-index: -1;
+}
+.transfer {
+    z-index: -1;
+}
+[data-kkey="scene"] {
+    background-color: rgba(117, 154, 122, 1);
+}
+[data-kkey="bg"] {
+    z-index: -1;
+}
+
+[data-kkey="bgfog"] {
+    background-image: radial-gradient(ellipse at center, rgba(125,185,232,0) 0%,rgba(125,185,232,0) 25%,rgba(125,185,232,0.85) 100%);
+    z-index: -1;
+}
+[data-kkey="ether"] {
+    z-index: -1;
+}
+.dwelling {
+    z-index: -1;
+}
+[data-sihdre-cell] {
+    /* border: 1px solid blue; */
+    border-radius: 50%;
+    font-size: 2em;
+    background-image: url(/images/hex.svg);
+    transition: All 100ms linear;
+}
+[data-sihdre-cell]:hover {
+    background-color: rgba(137, 43, 226, 0.25);
+}
+
+[data-sihdre-unit] {
+    pointer-events: none;
+}
+
+[data-kkey="hud"] {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    z-index: 2;
+    background-color: rgba(240, 248, 255, 0.2);
+    /*border: 1px solid white;*/
+    /*border-radius: 10px;*/
+    text-align: center;
+}
+
+[data-kkey="hud"] > div {
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+[data-kkey="hud"] > div:hover {
+    background-color: aliceblue;
+}
+.moveByPathOk {
+    cursor: pointer;
+    border-radius: 50%;
+    background-image: url(/images/cat-movement.svg);
+    opacity: 0.85;
+    background-size: 100%;
+    background-position: center;
+    box-shadow: inset 0 0 0 1px #2a2a29;
+    transition: All 100ms linear;
+}
+.moveByPathOk:hover {
+    opacity: 1;
+    box-shadow: inset 0 0 0 1px blueviolet;
+}
+
+/* 
+var circles = '.circle';
+var css = '';
+
+function round(nm, w, h) {
+    let numElements = nm;
+    let angle = -89.549;
+    let step = (2 * Math.PI) / numElements;
+    let radius = h / 2;
+
+    for(var i = 1; i <= numElements; i++) {
+        let x = (w / 2 - 50) + radius * Math.cos(angle);
+        let y = (h / 2 - 50) + radius * Math.sin(angle);
+        angle += step;
+        if (i > 1) circles += ' ~.circle'
+        css += `
+            [data-kkey="hud"] [data-sihdre-hud-key]${circles} {
+                transform: translate3d(${x}px, ${y}px, 0px);
+            }
+        `
+    }
+    console.log(css)
+};
+*/
+[data-kkey="hud"] [data-sihdre-hud-key].circle {
+    transform: translate3d(-23.97932855614456px, -49.99305454376224px, 0px);
+}
+
+[data-kkey="hud"] [data-sihdre-hud-key].circle ~.circle {
+    transform: translate3d(-77.30637371047311px, -28.7498211091007px, 0px);
+}
+
+[data-kkey="hud"] [data-sihdre-hud-key].circle ~.circle ~.circle {
+    transform: translate3d(-99.99305454376224px, 23.979328556144157px, 0px);
+}
+
+[data-kkey="hud"] [data-sihdre-hud-key].circle ~.circle ~.circle ~.circle {
+    transform: translate3d(-78.74982110910098px, 77.30637371047283px, 0px);
+}
+
+[data-kkey="hud"] [data-sihdre-hud-key].circle ~.circle ~.circle ~.circle ~.circle {
+    transform: translate3d(-26.020671443856248px, 99.99305454376223px, 0px);
+}
+
+[data-kkey="hud"] [data-sihdre-hud-key].circle ~.circle ~.circle ~.circle ~.circle ~.circle {
+    transform: translate3d(27.306373710472542px, 78.74982110910126px, 0px);
+}
+
+[data-kkey="hud"] [data-sihdre-hud-key].circle ~.circle ~.circle ~.circle ~.circle ~.circle ~.circle {
+    transform: translate3d(49.99305454376221px, 26.020671443856653px, 0px);
+}
+
+[data-kkey="hud"] [data-sihdre-hud-key].circle ~.circle ~.circle ~.circle ~.circle ~.circle ~.circle ~.circle {
+    transform: translate3d(28.74982110910154px, -27.30637371047225px, 0px);
+}
+
+[data-kkey="hudActions"] [data-kkey="line"] {
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 140px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 10px;
+    cursor: default;
+    pointer-events: none;
+    background-color: #2a2a29;
+    color: white;
+    text-align: left;
+    opacity: 0.85;
+}
+[data-kkey="hud"] [data-sihdre-hud-key] [data-kkey="info"] {
+    position: absolute;
+    display: none;
+    top: -140%;
+    right: 70%;
+    min-width: 150px;
+    min-height: 100%;
+    padding: 10px;
+    background-color: #2a2a29;
+    color: white;
+    text-align: left;
+    opacity: 0.85;
+}
+
+[data-kkey="hud"] [data-kkey="advice"] {
+    position: absolute;
+    width: 140px;
+    margin-left: -50px;
+    margin-top: -100px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: default;
+    pointer-events: none;
+    background-color: #2a2a29;
+    color: white;
+    text-align: left;
+    opacity: 0.85;
+}
+
+[data-kkey="hud"] [data-sihdre-hud-key] [data-kkey="info"] p {
+    margin: 0;
+}
+[data-kkey="hud"] [data-sihdre-hud-key] [data-kkey="info"] span.red {
+    font-weight: 700;
+    color: red;
+}
+[data-kkey="hud"] [data-sihdre-hud-key]:hover [data-kkey="info"] {
+    display: block;
+    opacity: 0;
+    animation: appear 250ms 500ms linear 1 forwards;
+}
+
+@keyframes appear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+[data-kkey="hud"] .menu {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    opacity: 0.85;
+    background-size: 100%;
+    background-position: center;
+    box-shadow: inset 0 0 0 1px #2a2a29;
+    transition: All 100ms linear;
+}
+
+[data-kkey="hud"] .menu:hover {
+    opacity: 1;
+    box-shadow: inset 0 0 0 1px white;
+}
+
+[data-kkey="hud"] .startGame {
+    cursor: pointer;
+    width: 250px;
+    padding: 10px;
+    padding-right: 0; /* fixing letter-spacing */
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0.5;
+    background-color: black;
+    color: white;
+    transition: All 100ms linear;
+}
+[data-kkey="hud"] > div.startGame:hover {
+    background-color: black;
+    opacity: 1;
+}
+
+[data-kkey="hud"] .restartGame {
+    cursor: pointer;
+    width: 300px;
+    padding: 10px;
+    padding-right: 0; /* fixing letter-spacing */
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0.5;
+    background-color: black;
+    color: white;
+    transition: All 100ms linear;
+}
+[data-kkey="hud"] > div.restartGame:hover {
+    background-color: black;
+    opacity: 1;
+}
+
+[data-kkey="hud"] .credits {
+    cursor: auto;
+    width: 250px;
+    height: 100px;
+    color: white;
+}
+[data-kkey="hud"] .vector {
+    position: absolute;
+    height: 10px;
+    background-color: red;
+}
+[data-kkey="hud"] .credits a {
+    color: #84fdee;
+}
+[data-kkey="hud"] > div.credits:hover {
+    background-color: transparent;
+}
+[data-kkey="hud"] .cancel {
+    background-image: url(/images/cancel.svg);
+}
+[data-kkey="hud"] .ok {
+    background-image: url(/images/okay.svg);
+}
+[data-kkey="hud"] .selectUnitAction {
+    background-image: url(/images/select.svg);
+}
+[data-kkey="hud"] .actionPlayerFinishesTurn {
+    background-image: url(/images/stopwatch.svg);
+}
+[data-kkey="hud"] .cancelSelectUnit {
+    background-image: url(/images/cancel.svg);
+}
+[data-kkey="hud"] .thrust {
+    background-image: url(/images/cat-closebattle.svg);
+}
+[data-kkey="hud"] .shot {
+    background-image: url(/images/cat-rangebattle.svg);
+}
+[data-kkey="hud"] .move {
+    background-image: url(/images/cat-movement.svg);
+}
+[data-kkey="hud"] .regenerate {
+    background-image: url(/images/cat-distortion.svg);
+}
+[data-kkey="hud"] .transfer {
+    background-image: url(/images/cat-distortion.svg);
+}
+
+
+[data-kkey="hud"] .tip {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    opacity: 0.25;
+    background-size: 100%;
+    background-position: center;
+    box-shadow: inset 0 0 0 1px #2a2a29;
+    transition: All 100ms linear;
+}
+
+[data-kkey="hud"] .tip:hover {
+    opacity: 1;
+    z-index: 2;
+    box-shadow: inset 0 0 0 1px white;
+}
+[data-kkey="hud"] .tip [data-kkey="info"] {
+    position: absolute;
+    display: none;
+    top: -280%;
+    right: -100%;
+    min-width: 150px;
+    min-height: 100%;
+    padding: 10px;
+    background-color: #2a2a29;
+    color: white;
+    text-align: left;
+    opacity: 0.85;
+}
+
+/*effects*/
+[data-kkey="hud"] .tip.tip-fort {
+    background-image: url(/images/icon-fort.svg);
+}
+[data-kkey="hud"] .tip.tip-platform {
+    background-image: url(/images/icon-fort.svg);
+}
+[data-kkey="hud"] .tip.tip-water {
+    background-image: url(/images/icon-water.svg);
+}
+[data-kkey="hud"] .tip.tip-dwelling {
+    background-image: url(/images/icon-cave.svg);
+}
+[data-kkey="hud"] .tip.tip-swamp {
+    background-image: url(/images/icon-forest.svg);
+}
+[data-kkey="hud"] .tip.tip-transfer {
+    background-image: url(/images/icon-force.svg);
+}
+
+/*units*/
+[data-kkey="hud"] .tip.tip-fighter {
+    background-image: url(/images/humans-fighter.png);
+}

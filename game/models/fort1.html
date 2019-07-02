@@ -1,0 +1,54 @@
+<div class="fort idle" data-model="model" data-style-width="300" data-style-height="300" data-style-depth="200">
+    <div class="body">
+        <div class="part torso">
+            <div class="part b"></div>
+            <div class="part c"></div>
+        </div>
+    </div>
+</div>
+<style id="fort">
+    .fort {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        transform-origin: 0px 0px 0px;
+        perspective-origin: 0px 0px;
+        pointer-events: none;
+    }
+
+    .fort .body {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+
+    .fort .body .part {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 350px;
+        height: 200px;
+        background-size: 100% 100%;
+        transform-style: preserve-3d;
+        transform-origin: 100px 100px 0px;
+        perspective-origin: 0px 0px;
+    }
+    .fort .body .part .part {
+        background-image: url(./images/fort.png);
+    }
+    .fort .body .part.a {
+        transform: translate3d(-70px, 0px, 100px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, -90deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .fort .body .part.b {
+        transform: translate3d(60px, -60px, 100px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, -160deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .fort .body .part.c {
+        transform: translate3d(110px, 70px, 100px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 95deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .fort .body .part.d {
+        transform: translate3d(-25px, 120px, 100px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 10deg) rotate3d(0, 0, 1, 0deg);
+    }
+</style>

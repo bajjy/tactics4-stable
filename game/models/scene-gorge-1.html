@@ -1,0 +1,388 @@
+<div class="scene-gorge-1 idle" data-model="model" data-style-width="1500" data-style-height="1500" data-style-depth="2000">
+    <!-- <div class="body a">
+        <div class="part skybox a">
+            <div class="part c"></div>
+        </div>
+    </div> -->
+    <div class="bg"></div>
+    <div class="body f">
+        <div class="part torso a">
+            
+            <div class="part a"></div>
+            <div class="part e"></div>
+            <div class="part f"></div>
+
+        </div>
+    </div>
+    <div class="body b">
+        <div class="part torso a">
+            
+            <div class="part a"></div>
+            <div class="part b"></div>
+            <div class="part c"></div>
+
+        </div>
+    </div>
+    <div class="body d">
+        <div class="part torso a">
+            
+            <div class="part a"></div>
+            <div class="part b"></div>
+            <div class="part c"></div>
+
+        </div>
+    </div>
+    <div class="body e">
+        <div class="part torso a">
+            
+            <div class="part a"></div>
+            <div class="part e"></div>
+            <div class="part f"></div>
+
+        </div>
+    </div>
+    <!-- <div class="body g">
+
+    </div> -->
+    <div class="body mm">
+        <div class="part torso a">
+            
+            <div class="part aa"></div>
+            <div class="part bb"></div>
+            <div class="part cc"></div>
+            <div class="part dd"></div>
+            <div class="part ee"></div>
+
+        </div>
+    </div>
+    <!-- <div class="body kk">
+        <div class="part torso a">
+            <div class="part ff"></div>
+            <div class="part gg"></div>
+        </div>
+    </div> -->
+    <!-- <div class="body ll">
+        <div class="part torso a">
+            <div class="part ff"></div>
+            <div class="part gg"></div>
+        </div>
+    </div> -->
+    <!-- <div class="body g2">
+
+    </div> -->
+    <div class="wall">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+        <div class="d"></div>
+        <div class="e"></div>
+        <div class="f"></div>
+    </div>
+</div>
+<style id="scene-gorge-1">
+    .scene-gorge-1 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 650px;
+        height: 650px;
+        transform-style: preserve-3d;
+        transform-origin: 0px 25px 0px;
+        perspective-origin: 0px 0px;
+    }
+    .scene-gorge-1 .bg {
+        width: 2000px;
+        height: 2000px;
+        background-image: url(/images/swampy_ground.jpg);
+        position: absolute;
+        transform: translate3d(-500px, -100px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .scene-gorge-1 .body,
+    .scene-gorge-1 .body .part {
+        pointer-events: none;
+    }
+    .scene-gorge-1 .body.a {
+        position: absolute;
+        width: 1400px;
+        height: 190px;
+        transform-style: preserve-3d;
+        transform: translate3d(300px, 300px, 190px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 120deg);
+    }
+
+    .scene-gorge-1 .body.b {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        transform-style: preserve-3d;
+        transform: translate3d(435px, 250px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 325deg) rotate3d(0, 0, 1, 175deg);
+    }
+
+    .scene-gorge-1 .body.d {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        transform-style: preserve-3d;
+        transform: translate3d(250px, 590px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 120deg) rotate3d(0, 1, 0, 325deg) rotate3d(0, 0, 1, 175deg);
+    }
+
+    .scene-gorge-1 .body.e {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        transform-style: preserve-3d;
+        transform: translate3d(360px, 580px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 295deg) rotate3d(0, 0, 1, 175deg);
+    }
+    
+    .scene-gorge-1 .body.f {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        transform-style: preserve-3d;
+        transform: translate3d(520px, 335px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 295deg) rotate3d(0, 0, 1, 175deg);
+    }
+
+    .scene-gorge-1 .body.g {
+        position: absolute;
+        display: block;
+        background-image: url(/images/swampy_mount_fg.png);
+        width: 250px;
+        height: 370px;
+        transform-style: preserve-3d;
+        transform: translate3d(225px, -100px, 120px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 60deg) rotate3d(0, 0, 1, 0deg);
+        /*background-size: 100% 100%;*/
+    }
+    /* @media (min-width: 1200px) {
+        .scene-gorge-1 .body.g {
+            display: block;
+            background-image: url(/images/swampy_mount_fg.png);
+        }
+    } */
+    .scene-gorge-1 .body.g2 {
+        position: absolute;
+        display: block;
+        background-image: url(/images/swampy_mount_fg.png);
+        width: 250px;
+        height: 370px;
+        transform-style: preserve-3d;
+        transform: translate3d(-60px, 300px, 120px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 70deg) rotate3d(0, 0, 1, 0deg);
+        background-image: url(/images/swampy_mount_fg.png);
+        /*background-size: 100% 100%;*/
+    }
+    /* @media (min-width: 1200px) {
+        .scene-gorge-1 .body.g2 {
+            display: block;
+            background-image: url(/images/swampy_mount_fg.png);
+        }
+    } */
+    .scene-gorge-1 .body .part.torso {
+        background-image: none;
+    }
+    .scene-gorge-1 .body .part {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 120px;
+        height: 120px;
+        transform-style: preserve-3d;
+        transform-origin: 0px 0px 0px;
+        perspective-origin: 0px 0px;
+    }
+    .scene-gorge-1 .body .part.skybox {
+        width: 1400px;
+    }
+    .scene-gorge-1 .body .part.skybox .part {
+
+    }
+
+    .scene-gorge-1 .body .skybox .part.c {
+        transform: translate3d(0px, 90px, -40px) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        width: 1400px;
+        height: 190px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 0px 0px;
+    }
+
+    .scene-gorge-1 .body .part.torso .part {
+        background-size: 150px;
+        background-image: url(./images/swampy_rocks.jpg);
+    }
+    .scene-gorge-1 .body .torso .part.a {
+        transform: translate3d(0px, -440px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        width: 60px;
+        height: 500px;
+        background-position: 0px 0px;
+    }
+
+    .scene-gorge-1 .body .torso .part.b {
+        transform: translate3d(0px, -440px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 0deg);
+        width: 60px;
+        height: 500px;
+        background-position: 0px 0px;
+    }
+
+    .scene-gorge-1 .body .torso .part.c {
+        transform: translate3d(60px, -440px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 135deg) rotate3d(0, 0, 1, 0deg);
+        width: 85px;
+        height: 500px;
+        background-position: 0px 0px;
+    }
+
+    .scene-gorge-1 .body .torso .part.d {
+        transform: translate3d(60px, -440px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 135deg) rotate3d(0, 0, 1, 0deg);
+        width: 85px;
+        height: 500px;
+        background-position: 0px 0px;
+    }
+
+    .scene-gorge-1 .body .torso .part.e {
+        transform: translate3d(20px, -440px, 20px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 0deg);
+        width: 60px;
+        height: 500px;
+        background-position: 0px 0px;
+    }
+
+    .scene-gorge-1 .body .torso .part.f {
+        transform: translate3d(-20px, -440px, -25px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 180deg) rotate3d(0, 0, 1, 0deg);
+        width: 85px;
+        height: 500px;
+        background-position: 0px 0px;
+    }
+
+    .scene-gorge-1 .body.mm {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        transform-style: preserve-3d;
+        transform: translate3d(100px, 400px, -20px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -60deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, -15deg);
+    }
+
+    .scene-gorge-1 .body .torso .part.aa {
+        transform: translate3d(0px, 0px, 120px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        width: 120px;
+        height: 120px;
+        background-position: 0px 0px;
+    }
+    .scene-gorge-1 .body .torso .part.bb {
+        transform: translate3d(0px, 0px, 120px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 0deg);
+        width: 120px;
+        height: 120px;
+        background-position: 0px 0px;
+    }
+    .scene-gorge-1 .body .torso .part.cc {
+        transform: translate3d(0px, 0px, 120px) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        width: 120px;
+        height: 120px;
+        background-position: 0px 0px;
+        /*box-shadow: 0 0 15px 10px #3c3926, inset 0 0 50px 25px #3c3926; /*blurrin hack*/
+    }
+    .scene-gorge-1 .body .torso .part.dd {
+        transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        width: 120px;
+        height: 120px;
+        background-position: 0px 0px;
+    }
+    .scene-gorge-1 .body .torso .part.ee {
+        transform: translate3d(120px, 0px, 120px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 0deg);
+        width: 120px;
+        height: 120px;
+        background-position: 0px 0px;
+    }
+
+    .scene-gorge-1 .body.kk {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        transform-style: preserve-3d;
+        transform: translate3d(250px, 530px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -2deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, -30deg);
+    }
+    .scene-gorge-1 .body.ll {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        transform-style: preserve-3d;
+        transform: translate3d(500px, 420px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 15deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 130deg);
+        /*animation: floating 20s linear infinite;*/
+    }
+    @keyframes floating {
+        0% {
+            transform: translate3d(500px, 420px, 20px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 15deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        50% {
+            transform: translate3d(500px, 420px, 50px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 15deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 180deg);
+        }
+        100% {
+            transform: translate3d(500px, 420px, 20px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 15deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 360deg);
+        }
+    }
+    .scene-gorge-1 .body .torso .part.ff {
+        transform: translate3d(0px, 60px, 120px) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        width: 120px;
+        height: 120px;
+        background-position: 0px 0px;
+        background-image: url(images/swampy-mountain_24.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .scene-gorge-1 .body .torso .part.gg {
+        transform: translate3d(-10px, 100px, 85px) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 35deg) rotate3d(0, 0, 1, -30deg);
+        width: 120px;
+        height: 120px;
+        background-position: 0px 0px;
+        background-image: url(images/swampy-mountain_24.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .scene-gorge-1 .wall {
+        position: absolute;
+        transform: translate3d(90px, 420px, 85px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 120deg);
+        width: 1200px;
+        height: 120px;
+        transform-style: preserve-3d;
+    }
+    .scene-gorge-1 .wall div {
+        background-image: url(./images/swampy_rocks_bg.jpg);
+    }
+    /* @media (min-width: 1200px) {
+        .scene-gorge-1 .wall div {
+            background-image: url(./images/swampy_rocks_bg.jpg);
+        }
+    } */
+    .scene-gorge-1 .wall .a {
+        position: absolute;
+        transform: translate3d(540px, -230px, 70px) rotate3d(1, 0, 0, -60deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, -15deg);
+        width: 170px;
+        height: 400px;
+        background-position: 0px 0px;
+    }
+    .scene-gorge-1 .wall .b {
+        position: absolute;
+        transform: translate3d(700px, -180px, 60px) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 20deg) rotate3d(0, 0, 1, 10deg);
+        width: 260px;
+        height: 400px;
+        background-position: 0px 0px;
+    }
+    .scene-gorge-1 .wall .c {
+        position: absolute;
+        transform: translate3d(900px, -180px, 60px) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 20deg);
+        width: 260px;
+        height: 400px;
+        background-position: 0px 0px;
+    }
+    .scene-gorge-1 .wall .d {
+        position: absolute;
+        transform: translate3d(300px, -120px, -20px) rotate3d(1, 0, 0, -100deg) rotate3d(0, 1, 0, -20deg) rotate3d(0, 0, 1, 30deg);
+        width: 260px;
+        height: 200px;
+    }
+    .scene-gorge-1 .wall .e {
+        position: absolute;
+        transform: translate3d(130px, -120px, -20px) rotate3d(1, 0, 0, -110deg) rotate3d(0, 1, 0, 30deg) rotate3d(0, 0, 1, 40deg);
+        width: 250px;
+        height: 400px;
+        background-position: 0px 0px;
+    }
+</style>

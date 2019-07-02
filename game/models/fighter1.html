@@ -1,0 +1,92 @@
+<div class="fighter1 idle" data-model="model" data-style-width="200" data-style-height="200" data-style-depth="200">
+    <div class="body">
+        <div class="part torso">
+            <div class="part top"></div>
+            <div class="part a"></div>
+            <div class="part b"></div>
+            <div class="part c"></div>
+            <div class="part d"></div>
+            <!-- <div class="part shade"></div> -->
+        </div>
+    </div>
+</div>
+<style id="fighter1">
+    .fighter1 {
+        width: 47px;
+        height: 100px;
+        transform-style: preserve-3d;
+        transform-origin: 30px 25px 0px;
+        perspective-origin: 0px 0px;
+    }
+    .fighter1 .body {
+        position: relative;
+        width: 47px;
+        height: 100px;
+        transform-style: preserve-3d;
+        transform: translate3d(25px, -25px, 25px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 180deg) rotate3d(0, 0, 1, 180deg);
+    }
+    .fighter1 .body .part {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 47px;
+        height: 100px;
+        transform-style: preserve-3d;
+        transform-origin: 24px 50px 0px;
+        perspective-origin: 0px 0px;
+    }
+
+    .fighter1 .body .torso .part.a {
+        transform: translate3d(-1px, -23px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        width: 43px;
+        height: 100px;
+        background-image: url(./images/fighter1.png);
+        background-position: 103px -41px;
+    }
+    .fighter1 .body .torso .part.b {
+        transform: translate3d(-24px, -23px, 22px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 0deg);
+        width: 47px;
+        height: 100px;
+        background-image: url(./images/fighter1.png);
+        background-position: -42px -41px;
+    }
+    .fighter1 .body .torso .part.top {
+        transform: translate3d(-32px, -72px, 22px) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 90deg);
+        width: 47px;
+        height: 42px;
+        background-image: url(./images/fighter1.png);
+        background-position: -42px 0px;
+    }
+    .fighter1 .body .torso .part.c {
+        transform: translate3d(-7px, -23px, 45px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 180deg) rotate3d(0, 0, 1, 0deg);
+        width: 43px;
+        height: 100px;
+        background-image: url(./images/fighter1.png);
+        background-position: -1px -41px;
+    }
+    .fighter1 .body .torso .part.d {
+        transform: translate3d(17px, -23px, 23px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 0deg);
+        width: 47px;
+        height: 100px;
+        background-image: url(./images/fighter1.png);
+        background-position: 61px -41px;
+    }
+
+    .fighter1 .body .torso .part.shade {
+        transform: translate3d(-5px, 28px, 47px) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        width: 55px;
+        height: 50px;
+        background-color: black;
+        box-shadow: 0 0 50px 20px;
+        opacity: 0.7;
+    }
+    .unconscious .fighter1 .body .torso .part.shade {
+        display: none;
+    }
+
+    /* 
+    right vertical transform: translate3d(0px, -0.5em, 0px) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);"></div>
+    bottom horizontaltransform: translate3d(0px, 0.5em, 0px) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);"></div>
+    transform: translate3d(0.5em, 0px, 0px) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 0deg);"></div>
+    transform: translate3d(-0.5em, 0px, 0px) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 0deg);"></div> */
+</style>

@@ -1,0 +1,49 @@
+<div class="scene-start-screen idle" data-model="model" data-style-width="1920" data-style-height="1080" data-style-depth="2000">
+    <div class="title">
+        SWAMPCAVE <br>
+        tactics
+    </div>
+</div>
+
+<style id="scene-start-screen">
+    .scene-start-screen {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform-origin: 0px 0px 0px;
+        perspective-origin: 0px 0px;
+        background-image: radial-gradient(ellipse at center, rgba(117, 154, 122,0) 0%,rgba(117, 154, 122,0) 30%,rgba(117, 154, 122,1) 70%), url(/images/osr.jpg);
+    }
+
+    .scene-start-screen .bg {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        transform-style: preserve-3d;
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .scene-start-screen .title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        height: 10vw;
+        width: 100%;
+        margin: auto;
+        color: #b1b1b1;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 4vw;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1vw;
+        z-index: 2;
+    }
+</style>

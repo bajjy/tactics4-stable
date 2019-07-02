@@ -1,0 +1,62 @@
+<div class="rectangle-long idle" data-model="model" data-style-width="300" data-style-height="300" data-style-depth="200">
+    <div class="body">
+        <div class="part torso">
+            <div class="part top"></div>
+            <div class="part a"></div>
+            <div class="part b"></div>
+            <div class="part c"></div>
+            <div class="part d"></div>
+        </div>
+    </div>
+</div>
+<style id="rectangle-long">
+    .rectangle-long {
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transform-origin: 0px 25px 0px;
+        perspective-origin: 0px 0px;
+    }
+
+    .rectangle-long .body {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 180deg) rotate3d(0, 0, 1, 180deg);
+    }
+
+    .rectangle-long .body .part {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transform-origin: 100px 50px 0px;
+        perspective-origin: 0px 0px;
+        background-image: url(./images/swampy_rocks.jpg);
+    }
+
+    .rectangle-long .body .torso .part.a {
+        transform: translate3d(0px, -100px, -100px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        width: 200px;
+        height: 200px;
+        background-position: 0px 0px;
+    }
+
+    .rectangle-long .body .torso .part.b {
+        transform: translate3d(100px, -100px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 0deg);
+        width: 200px;
+        height: 200px;
+        background-position: 0px 0px;
+        box-shadow: inset 0px -150px 50px 0 rgba(198, 255, 142, 0.25);
+    }
+
+    .rectangle-long .body .torso .part.c {
+        transform: translate3d(35px, -110px, 33px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 135deg) rotate3d(0, 0, 1, 0deg);
+        width: 290px;
+        height: 210px;
+        background-position: 0px 0px;
+    }
+</style>

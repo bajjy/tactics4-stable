@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 135.46666 135.46666"
+   height="135.46666mm"
+   width="135.46666mm">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(354.99524,-65.225003)"
+     id="layer1">
+    <g
+       transform="translate(5.4428477,-93.889273)"
+       id="layer1-5">
+      <g
+         transform="translate(76.653572,7.2571361)"
+         id="layer1-2">
+        <g
+           transform="matrix(0.26458333,0,0,0.26458333,-437.09166,151.85714)"
+           id="g993">
+          <g
+             transform="matrix(0.41666666,0,0,0.41666666,459.61906,157.61906)"
+             class=""
+             id="g980">
+            <g
+               transform="matrix(2.4000001,0,0,2.4000001,-1103.0858,-378.28579)"
+               id="g93">
+              <path
+                 style="fill:#8a2be2;fill-opacity:1"
+                 d="M 0,0 H 512 V 512 H 0 Z"
+                 id="path76" />
+              <g
+                 transform="matrix(0.33333334,0,0,0.33333334,170.66666,170.66666)"
+                 class=""
+                 id="g80">
+                <path
+                   style="fill:#ffffff;fill-opacity:1;stroke-width:1.96423876"
+                   d="m 97.633128,20.288163 c -1.905312,-0.0098 -3.940263,0.219995 -6.016464,0.614807 V 20.84011 C 55.676989,27.589238 2.7073629,89.08366 26.060197,112.42471 L 169.75801,256.05967 26.062161,399.69659 C -2.6746512,428.42358 83.56525,514.67134 112.30403,485.93845 L 255.99987,342.23868 399.69572,485.93452 c 28.73682,28.73289 114.98065,-57.51291 86.24187,-86.24186 L 342.24174,256.0577 485.93759,112.42471 C 514.6744,83.697717 428.4345,-2.4832565 399.69572,26.243735 L 255.99987,169.87869 112.30403,26.243735 c -4.04634,-4.018833 -8.95693,-5.92218 -14.672867,-5.951644 z"
+                   id="path78" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

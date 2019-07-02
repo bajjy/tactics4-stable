@@ -1,0 +1,364 @@
+<div class="human-low idle" data-model="model" data-style-width="6000" data-style-height="3000" data-style-depth="3000">
+    <div class="body">
+        <!-- <div class="part top"></div>
+        <div class="part right"></div>
+        
+        <div class="part back"></div>
+        <div class="part front"></div> -->
+        <div class="part head">
+            <div class="part"></div>
+            <div class="part b"></div>
+        </div>
+        <div class="part torso">
+            <div class="l">
+                <div class="part a"></div>
+                <div class="part b"></div>
+            </div>
+            <div class="r">
+                <div class="part c"></div>
+                <div class="part d"></div>
+            </div>
+        </div>
+        <div class="part hand-left">
+            <div class="top">
+                <div class="part a"></div>
+                <div class="part b"></div>
+            </div>
+            <div class="bottom">
+                <div class="part c"></div>
+                <div class="part d"></div>
+            </div>
+        </div>
+        <div class="part hand-right">
+            <div class="top">
+                <div class="part a"></div>
+                <div class="part b"></div>
+            </div>
+            <div class="bottom">
+                <div class="part c"></div>
+                <div class="part d"></div>
+            </div>
+        </div>
+        <div class="part leg-left">
+            <div class="top">
+                <div class="part a"></div>
+                <div class="part b"></div>
+            </div>
+            <div class="bottom">
+                <div class="part c"></div>
+                <div class="part d"></div>
+            </div>
+        </div>
+        <div class="part leg-right">
+            <div class="top">
+                <div class="part a"></div>
+                <div class="part b"></div>
+            </div>
+            <div class="bottom">
+                <div class="part c"></div>
+                <div class="part d"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<style id="human-low">
+    .human-low {
+        width: 200px;
+        height: 700px;
+        transform-style: preserve-3d;
+        transform-origin: 30px 25px 0px;
+        perspective-origin: 0px 0px;
+    }
+    .human-low .body {
+        position: relative;
+        width: 200px;
+        height: 700px;
+        transform-style: preserve-3d;
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 180deg);
+    }
+    .human-low .body .part {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200px;
+        height: 700px;
+        transform-style: preserve-3d;
+        transform-origin: 100px 350px 0px;
+        perspective-origin: 0px 0px;
+    }
+    .human-low .body .head {
+        transform-style: preserve-3d;
+        transform: translate3d(65px, 0em, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        width: 65px;
+        height: 100px;
+    }
+    .human-low .body .head .part {
+        background-color: black;
+        border: 1px solid gray;
+        width: 100%;
+        height: 100%;
+    }
+    .human-low .body .head .part.b {
+        transform: translate3d(-70px, 0px, 10px) rotate3d(1, 0, 0, 5deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 0deg);
+        width: 250%;
+    }
+    .movement .human-low .body .head {
+        animation: walk-head 250ms linear infinite;
+    }
+    @keyframes walk-head {
+        0% {
+            transform: translate3d(65px, 0em, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        33% {
+            transform: translate3d(65px, 0em, 10px) rotate3d(1, 0, 0, 2deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        75% {
+            transform: translate3d(65px, 0em, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+    }
+
+    .human-low .body .torso .part {
+        background-color: black;
+        border: 1px solid gray;
+    }
+    .human-low .body .torso .part.a {
+        transform: translate3d(30px, 100px, -60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 30deg) rotate3d(0, 0, 1, -5deg);
+        height: 300px;
+        width: 100px;
+    }
+    .human-low .body .torso .part.b {
+        transform: translate3d(30px, 100px, 60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -30deg) rotate3d(0, 0, 1, -5deg);
+        height: 300px;
+        width: 100px;
+    }
+    .human-low .body .torso .part.c {
+        transform: translate3d(60px, 110px, -10px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -30deg) rotate3d(0, 0, 1, 5deg);
+        height: 300px;
+        width: 100px;
+    }
+    .human-low .body .torso .part.d {
+        transform: translate3d(60px, 110px, 15px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 30deg) rotate3d(0, 0, 1, 5deg);
+        height: 300px;
+        width: 100px;
+    }
+    .movement .human-low .body .torso {
+        animation: walk-torso 250ms linear infinite;
+    }
+    @keyframes walk-torso {
+        0% {
+            transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        33% {
+            transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -5deg) rotate3d(0, 0, 1, 0deg);
+        }
+        75% {
+            transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 5deg) rotate3d(0, 0, 1, 0deg);
+        }
+    }
+
+    .human-low .body .hand-left {
+        transform-origin: 0px 100px 0px;
+    }
+    .human-low .body .hand-left .part {
+        background-color: black;
+        border: 1px solid gray;
+    }
+    .human-low .body .hand-left .part.a {
+        transform: translate3d(-15px, 115px, -60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 30deg) rotate3d(0, 0, 1, 0deg);
+        height: 150px;
+        width: 30px;
+    }
+    .human-low .body .hand-left .part.b {
+        transform: translate3d(-15px, 115px, 60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -30deg) rotate3d(0, 0, 1, 0deg);
+        height: 150px;
+        width: 30px;
+    }
+    .human-low .body .hand-left .bottom {
+        transform-style: preserve-3d;
+        transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, -25deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        transform-origin: 0px 270px 0px;
+    }
+    .human-low .body .hand-left .part.c {
+        transform: translate3d(-15px, 265px, 60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -30deg) rotate3d(0, 0, 1, 0deg);
+        height: 150px;
+        width: 30px;
+    }
+    .human-low .body .hand-left .part.d {
+        transform: translate3d(-15px, 265px, -60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 30deg) rotate3d(0, 0, 1, 0deg);
+        height: 150px;
+        width: 30px;
+    }
+    .movement .human-low .body .hand-left {
+        animation: walk-hand-left 250ms linear infinite;
+    }
+    @keyframes walk-hand-left {
+        0% {
+            transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        33% {
+            transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, -20deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        75% {
+            transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, 20deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+    }
+
+    .human-low .body .hand-right {
+        transform-style: preserve-3d;
+        transform: translate3d(180px, 0px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        transform-origin: 0px 100px 0px;
+    }
+    .human-low .body .hand-right .part {
+        background-color: black;
+        border: 1px solid gray;
+    }
+    .human-low .body .hand-right .part.a {
+        transform: translate3d(-15px, 115px, 30px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -30deg) rotate3d(0, 0, 1, 0deg);
+        height: 150px;
+        width: 30px;
+    }
+    .human-low .body .hand-right .part.b {
+        transform: translate3d(-15px, 115px, -30px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 30deg) rotate3d(0, 0, 1, 0deg);
+        height: 150px;
+        width: 30px;
+    }
+    .human-low .body .hand-right .bottom {
+        transform-style: preserve-3d;
+        transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, -25deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        transform-origin: 0px 270px 0px;
+    }
+    .human-low .body .hand-right .part.c {
+        transform: translate3d(-15px, 265px, -30px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 30deg) rotate3d(0, 0, 1, 0deg);
+        height: 150px;
+        width: 30px;
+    }
+    .human-low .body .hand-right .part.d {
+        transform: translate3d(-15px, 265px, 30px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -30deg) rotate3d(0, 0, 1, 0deg);
+        height: 150px;
+        width: 30px;
+    }
+    .movement .human-low .body .hand-right {
+        animation: walk-hand-right 250ms linear infinite;
+    }
+    @keyframes walk-hand-right {
+        0% {
+            transform: translate3d(180px, 0px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        33% {
+            transform: translate3d(180px, 0px, 0px) rotate3d(1, 0, 0, 20deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        75% {
+            transform: translate3d(180px, 0px, 0px) rotate3d(1, 0, 0, -20deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+    }
+
+    .human-low .body .leg-left .part {
+        background-color: black;
+        border: 1px solid gray;
+    }
+    .human-low .body .leg-left .part.a {
+        transform: translate3d(20px, 400px, -60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 30deg) rotate3d(0, 0, 1, 0deg);
+        height: 200px;
+        width: 50px;
+    }
+    .human-low .body .leg-left .part.b {
+        transform: translate3d(20px, 400px, 60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -30deg) rotate3d(0, 0, 1, 0deg);
+        height: 200px;
+        width: 50px;
+    }
+    .human-low .body .leg-left .bottom {
+        transform-style: preserve-3d;
+        transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, 2deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        transform-origin: 0px 620px 0px;
+    }
+    .human-low .body .leg-left .part.c {
+        transform: translate3d(20px, 600px, -60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 30deg) rotate3d(0, 0, 1, 0deg);
+        height: 200px;
+        width: 40px;
+    }
+    .human-low .body .leg-left .part.d {
+        transform: translate3d(20px, 600px, 60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -30deg) rotate3d(0, 0, 1, 0deg);
+        height: 200px;
+        width: 40px;
+    }
+    .movement .human-low .body .leg-left {
+        animation: walk-leg-left 250ms linear infinite;
+    }
+    @keyframes walk-leg-left {
+        0% {
+            transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        33% {
+            transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, 20deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        75% {
+            transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, -20deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+    }
+
+    .human-low .body .leg-right {
+        transform-style: preserve-3d;
+        transform: translate3d(90px, 0px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        transform-origin: 0px 270px 0px;
+    }
+    .human-low .body .leg-right .part {
+        background-color: black;
+        border: 1px solid gray;
+    }
+    .human-low .body .leg-right .part.a {
+        transform: translate3d(20px, 400px, -60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 30deg) rotate3d(0, 0, 1, 0deg);
+        height: 200px;
+        width: 50px;
+    }
+    .human-low .body .leg-right .part.b {
+        transform: translate3d(20px, 400px, 60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -30deg) rotate3d(0, 0, 1, 0deg);
+        height: 200px;
+        width: 50px;
+    }
+    .human-low .body .leg-right .bottom {
+        transform-style: preserve-3d;
+        transform: translate3d(0px, 0px, 0px) rotate3d(1, 0, 0, 2deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        transform-origin: 0px 620px 0px;
+    }
+    .human-low .body .leg-right .part.c {
+        transform: translate3d(20px, 600px, -60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 30deg) rotate3d(0, 0, 1, 0deg);
+        height: 200px;
+        width: 40px;
+    }
+    .human-low .body .leg-right .part.d {
+        transform: translate3d(20px, 600px, 60px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -30deg) rotate3d(0, 0, 1, 0deg);
+        height: 200px;
+        width: 40px;
+    }
+    .movement .human-low .body .leg-right {
+        animation: walk-leg-right 250ms linear infinite;
+    }
+    @keyframes walk-leg-right {
+        0% {
+            transform: translate3d(90px, 0px, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        33% {
+            transform: translate3d(90px, 0px, 0px) rotate3d(1, 0, 0, -20deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        75% {
+            transform: translate3d(90px, 0px, 0px) rotate3d(1, 0, 0, 20deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+    }
+
+    .human-low .body .right {
+        background-color: rgba(9, 255, 0, 0.781);
+        transform: translate3d(100px, 0em, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 0deg);
+    }
+
+    .human-low .body .back {
+        height: 200px;
+        background-color: rgba(0, 238, 255, 0.3);
+        transform: translate3d(0em, -350px, 250px) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .human-low .body .front {
+        height: 200px;
+        background-color: rgba(0, 238, 255, 0.3);
+        transform: translate3d(0em, 350px, 250px) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+
+</style>

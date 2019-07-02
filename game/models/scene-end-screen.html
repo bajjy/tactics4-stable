@@ -1,0 +1,100 @@
+<div class="scene-end-screen idle" data-model="model" data-style-width="1920" data-style-height="1080" data-style-depth="2000">
+    <div class="title">
+        YOU DIED
+    </div>
+    <div class="wall"></div>
+    <div class="art"></div>
+    <div class="floor"></div>
+</div>
+
+<style id="scene-end-screen">
+    .scene-end-screen {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform-origin: 0px 0px 0px;
+        perspective-origin: 0px 0px;
+        background-image: url(/images/osr.jpg);
+    }
+
+    .scene-end-screen .bg {
+        position: absolute;
+        width: 1920px;
+        height: 1080px;
+        transform-style: preserve-3d;
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .scene-end-screen .title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        height: 10vw;
+        width: 100%;
+        margin: auto;
+        color: red;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 4vw;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1vw;
+        z-index: 2;
+        transform: translate3d(0px, 300px, 27vh) scale3d(1, 1, 1) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+    
+    .scene-end-screen .wall {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        margin: auto;
+        z-index: 2;
+        background-image: url(/images/swampy_rocks_bg.jpg);
+        background-size: 30%;
+        background-position: 50% 50%;
+        transform: translate3d(0px, -350px, 140px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .scene-end-screen .art {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        z-index: 2;
+        background-image: url(/images/end-screen.png);
+        background-size: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        transform: translate3d(0px, 100px, 140px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .scene-end-screen .floor {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        height: 100px;
+        width: 100%;
+        max-width: 40vw;
+        margin: auto;
+        z-index: 2;
+        background-image: url(/images/stonesinwater.png);
+        background-size: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        transform: translate3d(0px, 135px, 45px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+</style>

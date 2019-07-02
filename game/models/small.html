@@ -1,0 +1,77 @@
+<div class="small idle" data-model="model" data-style-width="400" data-style-height="400" data-style-depth="400">
+    <div class="body">
+        <div class="part top"></div>
+        <div class="part right"></div>
+        <div class="part bottom"></div>
+        <div class="part left"></div>
+        <div class="part back"></div>
+        <div class="part front"></div>
+    </div>
+</div>
+<style id="small">
+    .small {
+        width: 400px;
+        height: 400px;
+        transform-style: preserve-3d;
+        transform-origin: 0px 0px 0px;
+        perspective-origin: 0px 0px;
+        border-radius: 25%;
+        box-shadow: 0 0 0 2px red;
+    }
+    .small .body {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        transform-style: preserve-3d;
+    }
+    .small .body .part {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 400px;
+        height: 400px;
+        transform-style: preserve-3d;
+        transform-origin: 200px 200px 0px;
+        perspective-origin: 0px 0px;
+    }
+    .small .body .top {
+        background-color: rgba(23, 20, 220, 0.3);
+        transform: translate3d(0em, 0em, 200px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .small .body .right {
+        background-color: rgba(9, 255, 0, 0.781);
+        transform: translate3d(200px, 0em, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 90deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .small .body .left {
+        background-color: rgba(116, 0, 67, 0.781);
+        transform: translate3d(-350px, 0em, 0px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -45deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .small .body .bottom {
+        background-color: rgba(117, 0, 0, 0.3);
+        transform: translate3d(0em, 0em, -200px) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .small .body .back {
+        background-color: rgba(0, 238, 255, 0.3);
+        transform: translate3d(0em, -200px, 0px) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+    .small .body .front {
+        background-color: rgba(0, 238, 255, 0.3);
+        transform: translate3d(0em, 200px, 0px) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+
+    .walking .small.idle .bottom {
+        /*animation: walking 1s linear infinite;*/
+    }
+
+    @keyframes walking {
+        0% {
+            transform: translate3d(0em, 0em, 0em) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        33% {
+            transform: translate3d(0em, 0em, 0em) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+        75% {
+            transform: translate3d(0em, 0em, 0em) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+        }
+    }
+</style>

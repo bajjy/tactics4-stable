@@ -1,0 +1,269 @@
+[
+    {
+        "index": 0,
+        "bg": "ground",
+        "scene": "sceneStartScreen",
+        "width": 1800,
+        "height": 1800,
+        "left": -900,
+        "top": -900,
+        "script": [
+            {
+                "func": "startScreen",
+                "options": {
+                    "start": "new game"
+                }
+            }
+        ]
+    },
+    {
+        "index": 1,
+        "bg": "ground",
+        "scene": "sceneGorge0",
+        "width": 1800,
+        "height": 1800,
+        "left": -900,
+        "top": -900,
+        "script": [
+            {
+                "func": "addLand",
+                "land": [4, 4],
+                "options": {
+                    "hex": true
+                }
+            },
+            {
+                "func": "effect",
+                "target": [[3, 2]],
+                "task": "transfer",
+                "setup": {
+                    "page": 2,
+                    "pos": [0, 3]
+                }
+            },
+            {
+                "func": "shuffleEffect",
+                "target": [[0, 0], [0, 1], [1, 3], [1, 2], [1, 1], [2, 3]],
+                "setup": {
+                    "effects": [
+                        {
+                            "task": "swamp",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "water",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "mountain",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "platform",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "fort",
+                            "setup": {
+                            }
+                        },
+                        {}
+                    ]
+                }
+            },
+            {
+                "func": "shuffleEffect",
+                "target": [[1, 0], [2, 0], [2, 1], [3, 0], [3, 1]],
+                "setup": {
+                    "effects": [
+                        {
+                            "task": "dwelling",
+                            "setup": {
+                                "creatures": ["Brute", "Shooter"]
+                            }
+                        },
+                        {
+                            "task": "fort",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "platform",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "water",
+                            "setup": {
+                            }
+                        },
+                        {}
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "bg": "ground",
+        "scene": "sceneGorge1",
+        "width": 1800,
+        "height": 1800,
+        "left": -900,
+        "top": -900,
+        "script": [
+            {
+                "func": "addLand",
+                "land": [6, 4],
+                "options": {
+                    "hex": true
+                }
+            },
+            {
+                "func": "effect",
+                "target": [[5, 3]],
+                "task": "transfer",
+                "setup": {
+                    "page": 1,
+                    "pos": [0, 3]
+                }
+            },
+            {
+                "func": "shuffleEffect",
+                "target": [[0, 0], [0, 1], [1, 3], [1, 2], [1, 1], [2, 3]],
+                "setup": {
+                    "effects": [
+                        {
+                            "task": "swamp",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "mountain",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "mountain",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "platform",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "fort",
+                            "setup": {
+                            }
+                        },
+                        {}
+                    ]
+                }
+            },
+            {
+                "func": "shuffleEffect",
+                "target": [ [3, 0], [3, 1], [4, 0], [4, 1], [5, 1], [5, 2] ],
+                "setup": {
+                    "effects": [
+                        {
+                            "task": "dwelling",
+                            "setup": {
+                                "creatures": ["Brute", "Shooter"]
+                            }
+                        },
+                        {
+                            "task": "dwelling",
+                            "setup": {
+                                "creatures": ["Brute", "Shooter"]
+                            }
+                        },
+                        {
+                            "task": "fort",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "platform",
+                            "setup": {
+                            }
+                        },
+                        {
+                            "task": "mountain",
+                            "setup": {
+                            }
+                        },
+                        {}
+                    ]
+                }
+            }
+        ]
+    },
+
+    {
+        "index": 3,
+        "bg": "ground",
+        "scene": "sceneGorge1",
+        "width": 1800,
+        "height": 1800,
+        "left": -330,
+        "top": -330,
+        "script": [
+            {
+                "func": "addLand",
+                "land": [8, 4], 
+                "options": {
+                    "hex": true
+                }
+            },
+            {
+                "func": "effect",
+                "target": [[7, 2]],
+                "task": "transfer",
+                "setup": {
+                    "page": 0,
+                    "pos": [0, 3]
+                }
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "bg": "ground",
+        "scene": "sceneEndScreen",
+        "width": 1800,
+        "height": 1800,
+        "left": -900,
+        "top": -900,
+        "script": [
+            {
+                "func": "startScreen",
+                "options": {
+                    "start": "restart game"
+                }
+            }
+        ]
+    },
+    {
+        "index": 5,
+        "bg": "ground",
+        "scene": "sceneErrorScreen",
+        "width": 1800,
+        "height": 1800,
+        "left": -900,
+        "top": -900,
+        "script": [
+            {
+                "func": "startScreen",
+                "options": {
+                    "start": "restart game"
+                }
+            }
+        ]
+    }
+]

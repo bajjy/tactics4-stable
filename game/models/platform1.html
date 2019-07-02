@@ -1,0 +1,60 @@
+<div class="platform-1 idle" data-model="model" data-style-width="300" data-style-height="300" data-style-depth="200">
+    <div class="body">
+        <div class="part torso">
+            <div class="part a"></div>
+            <div class="part b"></div>
+        </div>
+    </div>
+</div>
+<style id="platform-1">
+    .platform-1 {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        transform-origin: 0px 0px 0px;
+        perspective-origin: 0px 0px;
+        pointer-events: none;
+    }
+
+    .platform-1 .body {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        transform: translate3d(60px, 40px, 0px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 0deg);
+    }
+
+    .platform-1 .body .part {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 350px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transform-origin: 100px 70px 0px;
+        perspective-origin: 0px 0px;
+    }
+    .platform-1 .body .part .part {
+        background-image: url(./images/platform-1.png);
+    }
+    .platform-1 .body .part.a {
+        transform: translate3d(30px, -20px, 10px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, 0deg) rotate3d(0, 0, 1, 120deg);
+        background-size: 100% 100%;
+    }
+    .platform-1 .body .part.b {
+        transform: translate3d(20px, -30px, 20px) scale3d(1, 1, 1) rotate3d(1, 0, 0, 0deg) rotate3d(0, 1, 0, -20deg) rotate3d(0, 0, 1, 95deg);
+        background-size: 100% 100%;
+    }
+    .platform-1 .body .info {
+        position: absolute;
+        width: 210px;
+        border-radius: 15px;
+        font-size: 1.5em;
+        background-color: #2d2d28;
+        color: #d9d5cd;
+        padding: 0 10px;
+        text-align: center;
+        transform: translate3d(0px, -55px, 150px) scale3d(1, 1, 1) rotate3d(1, 0, 0, -90deg) rotate3d(0, 1, 0, -120deg) rotate3d(0, 0, 1, 0deg);
+    }
+</style>
